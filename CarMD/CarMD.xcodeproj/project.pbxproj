@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90C46F82BBBE94D0062066E /* CarPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C46F72BBBE94D0062066E /* CarPart.swift */; };
+		F90C46FA2BBBEA110062066E /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C46F92BBBEA110062066E /* Dependencies.swift */; };
 		F946AE622BB4E6A100A1E934 /* CarMDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946AE612BB4E6A100A1E934 /* CarMDApp.swift */; };
 		F946AE642BB4E6A100A1E934 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946AE632BB4E6A100A1E934 /* ContentView.swift */; };
 		F946AE662BB4E6A200A1E934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F946AE652BB4E6A200A1E934 /* Assets.xcassets */; };
 		F946AE692BB4E6A200A1E934 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F946AE682BB4E6A200A1E934 /* Preview Assets.xcassets */; };
+		F986CEF32BBA9B65006B5ABF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = F986CEF22BBA9B65006B5ABF /* Supabase */; };
+		F986CEF82BBAA370006B5ABF /* AutoShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986CEF72BBAA370006B5ABF /* AutoShop.swift */; };
+		F9D79A842BBA185500BAB6AC /* AutoShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D79A832BBA185500BAB6AC /* AutoShopModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90C46F72BBBE94D0062066E /* CarPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPart.swift; sourceTree = "<group>"; };
+		F90C46F92BBBEA110062066E /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		F946AE5E2BB4E6A100A1E934 /* CarMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F946AE612BB4E6A100A1E934 /* CarMDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMDApp.swift; sourceTree = "<group>"; };
 		F946AE632BB4E6A100A1E934 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F946AE652BB4E6A200A1E934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F946AE682BB4E6A200A1E934 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F986CEF72BBAA370006B5ABF /* AutoShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoShop.swift; sourceTree = "<group>"; };
+		F9D79A832BBA185500BAB6AC /* AutoShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoShopModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F986CEF32BBA9B65006B5ABF /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,8 @@
 		F946AE602BB4E6A100A1E934 /* CarMD */ = {
 			isa = PBXGroup;
 			children = (
+				F986CEF42BBA9BF3006B5ABF /* Supporting Files */,
+				F9D79A7E2BBA12F000BAB6AC /* Model */,
 				F946AE612BB4E6A100A1E934 /* CarMDApp.swift */,
 				F946AE632BB4E6A100A1E934 /* ContentView.swift */,
 				F946AE652BB4E6A200A1E934 /* Assets.xcassets */,
@@ -65,6 +77,24 @@
 				F946AE682BB4E6A200A1E934 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F986CEF42BBA9BF3006B5ABF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9D79A7E2BBA12F000BAB6AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9D79A832BBA185500BAB6AC /* AutoShopModel.swift */,
+				F90C46F92BBBEA110062066E /* Dependencies.swift */,
+				F986CEF72BBAA370006B5ABF /* AutoShop.swift */,
+				F90C46F72BBBE94D0062066E /* CarPart.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +113,9 @@
 			dependencies = (
 			);
 			name = CarMD;
+			packageProductDependencies = (
+				F986CEF22BBA9B65006B5ABF /* Supabase */,
+			);
 			productName = CarMD;
 			productReference = F946AE5E2BB4E6A100A1E934 /* CarMD.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,9 @@
 				Base,
 			);
 			mainGroup = F946AE552BB4E6A100A1E934;
+			packageReferences = (
+				F986CEF12BBA9B65006B5ABF /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = F946AE5F2BB4E6A100A1E934 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90C46FA2BBBEA110062066E /* Dependencies.swift in Sources */,
+				F986CEF82BBAA370006B5ABF /* AutoShop.swift in Sources */,
+				F90C46F82BBBE94D0062066E /* CarPart.swift in Sources */,
 				F946AE642BB4E6A100A1E934 /* ContentView.swift in Sources */,
+				F9D79A842BBA185500BAB6AC /* AutoShopModel.swift in Sources */,
 				F946AE622BB4E6A100A1E934 /* CarMDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.CarMD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lavalab.CarMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +349,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.CarMD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lavalab.CarMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F986CEF12BBA9B65006B5ABF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F986CEF22BBA9B65006B5ABF /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F986CEF12BBA9B65006B5ABF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F946AE562BB4E6A100A1E934 /* Project object */;
 }

@@ -6,21 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @StateObject private var autoShopModel = AutoShopModel()
+//    @StateObject private var autoShopModel = Dependencies.shared.autoShops
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ForEach(autoShopModel.autoShops) { autoShop in
+                Text(autoShop.name)
+            }
+            .task {
+                await autoShopModel.fetchAllAutoShops()
+            }
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
