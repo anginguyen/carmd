@@ -6,19 +6,14 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @StateObject private var autoShopModel = AutoShopModel()
-//    @StateObject private var autoShopModel = Dependencies.shared.autoShops
+    @StateObject private var autoShopModel = Dependencies.shared.autoShops
     
     var body: some View {
-        VStack {
+        List {
             ForEach(autoShopModel.autoShops) { autoShop in
                 Text(autoShop.name)
-            }
-            .task {
-                await autoShopModel.fetchAllAutoShops()
             }
         }
     }

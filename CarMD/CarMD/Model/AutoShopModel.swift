@@ -12,12 +12,11 @@ import Supabase
 final class AutoShopModel: ObservableObject {
     static let shared = AutoShopModel()
     
-    var autoShops = [AutoShop]()
+    @Published var autoShops = [AutoShop]()
     
     init() {
         Task {
-            await fetchAllAutoShops()
-            print(self.autoShops)
+            self.autoShops = await fetchAllAutoShops()
         }
     }
     
@@ -37,9 +36,9 @@ final class AutoShopModel: ObservableObject {
     }
     
     // Fetch all auto shops with inventory
-    func fetchAllAutoShops() async {
+    func fetchAllAutoShops() async -> [AutoShop] {
         do {
-            let autoShops: [AutoShop] = try await supabase.database
+            return try await supabase.database
                 .from(Table.autoShops)
                 .select(
                     """
@@ -54,9 +53,9 @@ final class AutoShopModel: ObservableObject {
                 )
                 .execute()
                 .value
-            self.autoShops = autoShops
         } catch {
             dump(error)
+            return []
         }
     }
 }
