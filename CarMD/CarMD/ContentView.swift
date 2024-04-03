@@ -11,9 +11,13 @@ struct ContentView: View {
     @StateObject private var autoShopModel = Dependencies.shared.autoShops
     
     var body: some View {
-        List {
-            ForEach(autoShopModel.autoShops) { autoShop in
-                Text(autoShop.name)
+        NavigationStack {
+            List (autoShopModel.autoShops) { autoShop in
+                NavigationLink {
+                    InventoryView(inventory: autoShop.inventory!)
+                } label: {
+                    Text(autoShop.name)
+                }
             }
         }
     }

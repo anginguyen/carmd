@@ -15,6 +15,7 @@
 		F946AE692BB4E6A200A1E934 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F946AE682BB4E6A200A1E934 /* Preview Assets.xcassets */; };
 		F986CEF32BBA9B65006B5ABF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = F986CEF22BBA9B65006B5ABF /* Supabase */; };
 		F986CEF82BBAA370006B5ABF /* AutoShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986CEF72BBAA370006B5ABF /* AutoShop.swift */; };
+		F9B54AD02BBD1F6500E21A8E /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B54ACF2BBD1F6500E21A8E /* InventoryView.swift */; };
 		F9D79A842BBA185500BAB6AC /* AutoShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D79A832BBA185500BAB6AC /* AutoShopModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F946AE652BB4E6A200A1E934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F946AE682BB4E6A200A1E934 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F986CEF72BBAA370006B5ABF /* AutoShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoShop.swift; sourceTree = "<group>"; };
+		F9B54ACF2BBD1F6500E21A8E /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		F9D79A832BBA185500BAB6AC /* AutoShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoShopModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,10 +63,11 @@
 		F946AE602BB4E6A100A1E934 /* CarMD */ = {
 			isa = PBXGroup;
 			children = (
-				F986CEF42BBA9BF3006B5ABF /* Supporting Files */,
 				F9D79A7E2BBA12F000BAB6AC /* Model */,
+				F9B54ACE2BBD1F2700E21A8E /* View */,
 				F946AE612BB4E6A100A1E934 /* CarMDApp.swift */,
 				F946AE632BB4E6A100A1E934 /* ContentView.swift */,
+				F986CEF42BBA9BF3006B5ABF /* Supporting Files */,
 				F946AE652BB4E6A200A1E934 /* Assets.xcassets */,
 				F946AE672BB4E6A200A1E934 /* Preview Content */,
 			);
@@ -84,6 +87,14 @@
 			children = (
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9B54ACE2BBD1F2700E21A8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9B54ACF2BBD1F6500E21A8E /* InventoryView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F9D79A7E2BBA12F000BAB6AC /* Model */ = {
@@ -177,6 +188,7 @@
 				F986CEF82BBAA370006B5ABF /* AutoShop.swift in Sources */,
 				F90C46F82BBBE94D0062066E /* CarPart.swift in Sources */,
 				F946AE642BB4E6A100A1E934 /* ContentView.swift in Sources */,
+				F9B54AD02BBD1F6500E21A8E /* InventoryView.swift in Sources */,
 				F9D79A842BBA185500BAB6AC /* AutoShopModel.swift in Sources */,
 				F946AE622BB4E6A100A1E934 /* CarMDApp.swift in Sources */,
 			);
